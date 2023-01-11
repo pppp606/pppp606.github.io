@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title>pppp606 | Profile</title>
+<meta name=”robots” content=”noindex” />
+<style>
+#canvasWave {
+  background: rgba(255, 255, 255, .97);
+  width: 50%;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+body{
+}
+.iroha-32sakura-stdn{
+  font-family: iroha-32sakura-stdn, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.pre{
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: rgba(175,184,193,0.2);
+  border-radius: 6px;
+  display: inline-block;
+}
+.contribution{
+  background-color: #9be9a8;
+  border: 1px solid #1b1f230f;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 2px;
+  float: left;
+}
+.highlight{
+  background:linear-gradient(transparent 80%, #fff279 80%);
+  display: inline-block;
+}
+</style>  
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+<script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  (function (d) {
+    var config = {
+      kitId: 'pgf3pyv',
+      scriptTimeout: 3000,
+      async: true
+    },
+      h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+  })(document);
+</script>
+<script defer src="main.js"></script>
+</head>
+<body class="bg-white">
+<div class="w-screen absolute justify-center items-center z-50">
+  <div id="contents">
+    <div class="md:flex flex-row">
+      <div class="basis-1/2">
+        <h1 class="text-2xl md:text-8xl iroha-32sakura-stdn ml-4 md:ml-8 pt-8">Takuto Yuki</h1>
+      </div>
+      <div class="basis-1/2 px-4 pt-8 md:pt-32 md:h-screen md:overflow-scroll">
+        <div class="mb-16">
+          <h2 class="iroha-32sakura-stdn text-lg mb-2 text-[#019ede]"># Profile</h2>
+          <div class="md:pl-4">
+            <p class="mb-4 text-sm">Web開発を中心に企画、コンサルティングまでWebサービスに関わる一連の業務を行なっています。</p>
+            <p class="mb-4 text-sm">一般的なITエンジニアに比べビジネス寄りの業務経験を持っています。<br class="hidden md:inline-block" />またUI/UXの設計を得意としていますので、簡単な企画からサービスの仕様、<br class="hidden md:inline-block" />ビジネスモデルを理解しスピーディーにプロトタイプを作成する事を得意としています。</p>
+            <p class="mb-4 text-sm">お仕事のご依頼はメールよりお気軽にお送りください。</p>
+            <div class="pre">東京都 千代田区<br />mail: t-yuki@kumoha.jp</div>
+          </div>
+        </div>
+        <div class="mb-16">
+          <h2 class="iroha-32sakura-stdn text-lg mb-2 text-[#e7d110]"># Skill</h2>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm">業務で主に利用している言語</h3>
+            <div class="pre" class="text-sm">Ruby, PHP, TypeScript, JavascriptHTML, CSS</div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm">業務実績のあるフレームワーク、アプリケーション等</h3>
+            <div class="pre" class="text-sm">Ruby on Rails,<br />React, Vue.js, Node.js, Express.js,<br />Laravel, CakePHP, FuelPHP,<br />Rspec, Capybara, Mocha, Jest, cypress, PHPUnit,<br />Wordpress, ECcube,<br />MySQL, postgreSQL, MongoDB, Firebase,<br />AWS,GCP,<br />Photoshop, Illustrator, XD, Figma</div>
+          </div>
+        </div>
+        <div class="mb-16">
+          <h2 class="iroha-32sakura-stdn text-lg mb-2 text-[#e1017e]"># Works</h2>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm highlight">リーガルテックサービス</h3>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">技術スタック</h4>
+              <div class="pre" class="text-sm">TypeScript, React, NextJS, MUI</div>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">担当した業務</h4>
+              <div class="pre" class="text-sm">フロントの実装, サーバーサイドレンダリング</div>
+            </div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm highlight">ペットグッズ販売ECサイト</h3>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">技術スタック</h4>
+              <div class="pre" class="text-sm">shopify</div>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">担当した業務</h4>
+              <div class="pre" class="text-sm">shopifyへの実装</div>
+            </div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm highlight">SaaS管理システム</h3>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">技術スタック</h4>
+              <div class="pre"
+                class="text-sm">Ruby, Ruby on Rails, MySQL, TypeScript, React, OpenAPI<br />SQS, Lambda, CircleCI, Cypress, Jest</div>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">担当した業務</h4>
+              <div class="pre" class="text-sm">バックエンド開発, フロントの開発, chrome拡張の開発</div>
+            </div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm highlight">病院予約・検索サイト</h3>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">技術スタック</h4>
+              <div class="pre" class="text-sm">PHP, FuelPHP, PostgreSQL, MySQL, JavaScript<br />Bitbucket, Ubuntu, vue.js, ionic</div>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">担当した業務</h4>
+              <div class="pre" class="text-sm">事業責任者, バックエンド開発, フロントエンド開発, アプリ開発<br />SEO対策, 広告運用, 事業計画、予算策定, チームマネージメント</div>
+            </div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm highlight">⻭科医院スタッフ管理システム</h3>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">技術スタック</h4>
+              <div class="pre" class="text-sm">.NET framework, JavaScript, Vue.js<br />MySQL, Swagger, Ubuntu</div>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">担当した業務</h4>
+              <div class="pre" class="text-sm">クライアントとの折衝、提案, 基本設計、仕様決定,<br />DB設計 フロントの実装,導入支援</div>
+            </div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm highlight">税理士事務所向け管理システム</h3>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">技術スタック</h4>
+              <div class="pre" class="text-sm">Ruby, Ruby on Ralis, MySQL, TypeScript Vue.js<br />Swagger, CentOS, GithubAction</div>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2 text-sm">担当した業務</h4>
+              <div class="pre" class="text-sm">基本設計、仕様策定, 開発環境の整備(Docker, Git, CI/CD)<br />DB設計、構築(Mysql), APIの実装, フロントの開発</div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-16">
+          <h2 class="iroha-32sakura-stdn text-lg mb-2 text-[#019ede]"># OSS Contribute</h2>
+          <div class="d-flex flex-wrap md:pl-4">
+            <a 
+              style="max-width: 181px;"
+              class="inline-block py-1 pr-2 pl-1 rounded-md mr-2 mb-2 border border-gray-dark text-sm"
+              href="https://github.com/mui"
+              target="_blank"
+            >
+              <img class="inline-block" alt="" src="https://avatars.githubusercontent.com/u/33663932?s=40&amp;v=4" width="20"
+                height="20">
+              @mui
+            </a>
+            <a style="max-width: 181px;"
+              class="inline-block py-1 pr-2 pl-1 rounded-md mr-2 mb-2 border border-gray-dark text-sm"
+              href="https://github.com/testing-library"
+              target="_blank"
+            >
+              <img class="inline-block" alt="" src="https://avatars.githubusercontent.com/u/49996085?s=40&amp;v=4" width="20"
+                height="20">
+              @testing-library
+            </a>
+            <a style="max-width: 181px;" class="inline-block py-1 pr-2 pl-1 rounded-md mr-2 mb-2 border border-gray-dark text-sm"
+              href="https://github.com/OpenAPITools" target="_blank">
+              <img class="inline-block" alt="" src="https://avatars.githubusercontent.com/u/37325267?s=40&amp;v=4" width="20"
+                height="20">
+              @OpenAPITools
+            </a>
+          </div>
+        </div>
+        <div class="mb-16">
+          <h2 class="iroha-32sakura-stdn text-lg mb-2 text-[#e7d110]"># Links</h2>
+          <div class="mb-8 md:pl-4">
+            <ul>
+              <li class="mb-2"><a href="https://github.com/pppp606">- GitHub</a></li>
+              <li class="mb-2"></li><a href="https://qiita.com/pppp403">- Qiita</a>              
+            </ul>
+          </div>
+        </div>
+        <div class="mb-16">
+          <h2 class="iroha-32sakura-stdn text-lg mb-2 text-[#e1017e]"># Work Resources</h2>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm">GitHubにおける直近1ヶ月のContribution数:<span id="contributionCount" class="mx-4"></span></h3>
+            <div id="contributionBox" class="clear-both overflow-hidden md:w-96"></div>
+          </div>
+          <div class="mb-8 md:pl-4">
+            <h3 class="mb-2 text-sm">稼働率:<span id="contributionRate" class="mx-4"></span></h3>
+            <p class="text-sm">※ 1ヶ月のContribution数を210で100%とした場合</p>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+<canvas id="canvasWave" class="alignfull invisible md:visible"></canvas>
+</div>
+
+
+</body>
+</html>
