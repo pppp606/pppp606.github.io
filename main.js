@@ -72,9 +72,9 @@ window.addEventListener('DOMContentLoaded', () => {
           this.setType('flat');
         } else if (_r > 0.74) {
           this.setType('nois');
-        } else if (_r > 0.66) {
-          this.setType('stop');
         } else if (_r > 0.60) {
+          this.setType('stop');
+        } else if (_r > 0.50) {
           this.setType('point');
         }
       } else {
@@ -92,8 +92,8 @@ window.addEventListener('DOMContentLoaded', () => {
         this._maxLines = 5;
       }
       if (type === 'point') {
-        this._maxVertex = 150;
-        this._maxLines = 3;
+        this._maxVertex = 200;
+        this._maxLines = 10;
       }
     }
 
@@ -106,8 +106,11 @@ window.addEventListener('DOMContentLoaded', () => {
           _max = this._maxLines;
         }
         let _h = 3;
-        if (this._type === 'nois' || this._type === 'point') {
+        if (this._type === 'nois') {
           _h = 8;
+        }
+        if (this._type === 'point') {
+          _h = 6;
         }
         for (let i = 0; i < _max; i++) {
           this.drawWave(this._maxVertex, i * 0.1, _h);
@@ -153,6 +156,9 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (this._type === 'stop') {
           p0c_ = `rgba(0,0,${Math.random() * 255},${Math.random()})`;
+        }
+        if (this._type === 'point') {
+          p0c_ = "rgba(0,0,255,0.6)";
         }
         if (i > 0) {
           const p1x = points[i - 1].x;
@@ -219,32 +225,34 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // let openingAnimation = new opening();
-  let rootAnimation;
-  let count = 0;
-  setTimeout(() => {
-    // delete openingAnimation
+  if (window.matchMedia('(min-width: 768px)').matches) { 
+    // let openingAnimation = new opening();
+    let rootAnimation;
+    let count = 0;
     setTimeout(() => {
-      rootAnimation = new Main(true);
+      // delete openingAnimation
       setTimeout(() => {
-        setInterval(() => {
-          count++
-          if (count == 14) {
-            delete rootAnimation;
-            new Main('point');
-          }
-          if (count < 14) {
-            if (Math.random() > 0.5) {
+        rootAnimation = new Main(true);
+        setTimeout(() => {
+          setInterval(() => {
+            count++
+            if (count == 14) {
               delete rootAnimation;
-              setTimeout(() => {
-                rootAnimation = new Main();
-              }, 80);
+              new Main('point');
             }
-          }
+            if (count < 14) {
+              if (Math.random() > 0.5) {
+                delete rootAnimation;
+                setTimeout(() => {
+                  rootAnimation = new Main();
+                }, 80);
+              }
+            }
+          }, 2000);
         }, 2000);
-      }, 2000);
-    }, 800);
-  }, 300);
+      }, 800);
+    }, 300);
+  }
 
   axios.get("https://seh2nzv724rdglm23pba7e4tny0kdgle.lambda-url.ap-northeast-3.on.aws/").then(response => {
     const contributionCalendar = response.data.data.user.contributionsCollection.contributionCalendar.weeks;
