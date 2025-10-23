@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
       let p0x = 1;
       let p0y = 1;
       let i = 0;
-    
+
       for (let y = 0; y <= this._stageH / distance; y++) {
         for (let x = 0; x <= this._stageW / distance; x++) {
           let p0c = `rgba(0,0,255,${vertexArr[i] - 0.2})`;
@@ -225,7 +225,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (window.matchMedia('(min-width: 768px)').matches) { 
+  if (window.matchMedia('(min-width: 768px)').matches) {
     // let openingAnimation = new opening();
     let rootAnimation;
     let count = 0;
@@ -259,7 +259,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const lastFiveWeeks = contributionCalendar.slice(contributionCalendar.length - 6, contributionCalendar.length - 1);
     const lastFiveWeeksTotal = lastFiveWeeks.reduce((acc, cur) => acc + cur.contributionDays.reduce((acc, cur) => acc + cur.contributionCount, 0), 0);
     document.getElementById("contributionCount").innerHTML = lastFiveWeeksTotal;
-    document.getElementById("contributionRate").innerHTML = Math.round((lastFiveWeeksTotal / 210) * 100) + "%";
+    document.getElementById("contributionRate").innerHTML = Math.round((lastFiveWeeksTotal / 400) * 100) + "%";
     for (let i = 0; i < lastFiveWeeksTotal; i++) {
       document.getElementById("contributionBox").innerHTML += '<div class="contribution"></div>';
     }
